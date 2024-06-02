@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "417943856854",
+    "project_id": "gmailfreelancing",
+    "storage_bucket": "gmailfreelancing.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:417943856854:android:44baaab00df02d6d8c0b77",
+        "android_client_info": {
+          "package_name": "com.example.freelancing"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCXiNtHXPGaat6rkECWtveGl1HW2jxpTho"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
