@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:googleapis/abusiveexperiencereport/v1.dart';
 
 part 'firebase_exceptions.freezed.dart';
 
@@ -9,7 +10,7 @@ part 'firebase_exceptions.freezed.dart';
 abstract class FirebaseExceptions with _$FirebaseExceptions {
   const factory FirebaseExceptions.emailAlreadyExists() = EmailAlreadyExists;
 
-  const factory FirebaseExceptions.invalidToHeader() = InvalidToHeader;
+  const factory FirebaseExceptions.invalidEmail() = InvalidEmail;
 
   const factory FirebaseExceptions.invalidCredential() = InvalidCredential;
 
@@ -44,6 +45,8 @@ abstract class FirebaseExceptions with _$FirebaseExceptions {
           }
         } else if (error is SocketException) {
           firebaseExceptions = const FirebaseExceptions.noInternetConnection();
+        } else if (error is DetailedApiRequestError) {
+          firebaseExceptions = const FirebaseExceptions.invalidEmail();
         } else {
           firebaseExceptions = const FirebaseExceptions.unexpectedError();
         }
@@ -68,7 +71,7 @@ abstract class FirebaseExceptions with _$FirebaseExceptions {
       unexpectedError: () => errorMessage = "Unexpected error occurred",
       emailAlreadyExists: () =>
           errorMessage = "There is already an user with this email",
-      invalidToHeader: () => "Something wrong , check your email",
+      invalidEmail: () => errorMessage = "Something wrong , check your email",
     );
     return errorMessage;
   }

@@ -19,7 +19,7 @@ mixin _$FirebaseExceptions {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() emailAlreadyExists,
-    required TResult Function() invalidToHeader,
+    required TResult Function() invalidEmail,
     required TResult Function() invalidCredential,
     required TResult Function() formatException,
     required TResult Function() noInternetConnection,
@@ -29,7 +29,7 @@ mixin _$FirebaseExceptions {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? emailAlreadyExists,
-    TResult? Function()? invalidToHeader,
+    TResult? Function()? invalidEmail,
     TResult? Function()? invalidCredential,
     TResult? Function()? formatException,
     TResult? Function()? noInternetConnection,
@@ -39,7 +39,7 @@ mixin _$FirebaseExceptions {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? emailAlreadyExists,
-    TResult Function()? invalidToHeader,
+    TResult Function()? invalidEmail,
     TResult Function()? invalidCredential,
     TResult Function()? formatException,
     TResult Function()? noInternetConnection,
@@ -50,7 +50,7 @@ mixin _$FirebaseExceptions {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(EmailAlreadyExists value) emailAlreadyExists,
-    required TResult Function(InvalidToHeader value) invalidToHeader,
+    required TResult Function(InvalidEmail value) invalidEmail,
     required TResult Function(InvalidCredential value) invalidCredential,
     required TResult Function(FormatException value) formatException,
     required TResult Function(NoInternetConnection value) noInternetConnection,
@@ -60,7 +60,7 @@ mixin _$FirebaseExceptions {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(EmailAlreadyExists value)? emailAlreadyExists,
-    TResult? Function(InvalidToHeader value)? invalidToHeader,
+    TResult? Function(InvalidEmail value)? invalidEmail,
     TResult? Function(InvalidCredential value)? invalidCredential,
     TResult? Function(FormatException value)? formatException,
     TResult? Function(NoInternetConnection value)? noInternetConnection,
@@ -70,7 +70,7 @@ mixin _$FirebaseExceptions {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(EmailAlreadyExists value)? emailAlreadyExists,
-    TResult Function(InvalidToHeader value)? invalidToHeader,
+    TResult Function(InvalidEmail value)? invalidEmail,
     TResult Function(InvalidCredential value)? invalidCredential,
     TResult Function(FormatException value)? formatException,
     TResult Function(NoInternetConnection value)? noInternetConnection,
@@ -137,7 +137,7 @@ class _$EmailAlreadyExistsImpl implements EmailAlreadyExists {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() emailAlreadyExists,
-    required TResult Function() invalidToHeader,
+    required TResult Function() invalidEmail,
     required TResult Function() invalidCredential,
     required TResult Function() formatException,
     required TResult Function() noInternetConnection,
@@ -150,7 +150,7 @@ class _$EmailAlreadyExistsImpl implements EmailAlreadyExists {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? emailAlreadyExists,
-    TResult? Function()? invalidToHeader,
+    TResult? Function()? invalidEmail,
     TResult? Function()? invalidCredential,
     TResult? Function()? formatException,
     TResult? Function()? noInternetConnection,
@@ -163,7 +163,7 @@ class _$EmailAlreadyExistsImpl implements EmailAlreadyExists {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? emailAlreadyExists,
-    TResult Function()? invalidToHeader,
+    TResult Function()? invalidEmail,
     TResult Function()? invalidCredential,
     TResult Function()? formatException,
     TResult Function()? noInternetConnection,
@@ -180,7 +180,7 @@ class _$EmailAlreadyExistsImpl implements EmailAlreadyExists {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(EmailAlreadyExists value) emailAlreadyExists,
-    required TResult Function(InvalidToHeader value) invalidToHeader,
+    required TResult Function(InvalidEmail value) invalidEmail,
     required TResult Function(InvalidCredential value) invalidCredential,
     required TResult Function(FormatException value) formatException,
     required TResult Function(NoInternetConnection value) noInternetConnection,
@@ -193,7 +193,7 @@ class _$EmailAlreadyExistsImpl implements EmailAlreadyExists {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(EmailAlreadyExists value)? emailAlreadyExists,
-    TResult? Function(InvalidToHeader value)? invalidToHeader,
+    TResult? Function(InvalidEmail value)? invalidEmail,
     TResult? Function(InvalidCredential value)? invalidCredential,
     TResult? Function(FormatException value)? formatException,
     TResult? Function(NoInternetConnection value)? noInternetConnection,
@@ -206,7 +206,7 @@ class _$EmailAlreadyExistsImpl implements EmailAlreadyExists {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(EmailAlreadyExists value)? emailAlreadyExists,
-    TResult Function(InvalidToHeader value)? invalidToHeader,
+    TResult Function(InvalidEmail value)? invalidEmail,
     TResult Function(InvalidCredential value)? invalidCredential,
     TResult Function(FormatException value)? formatException,
     TResult Function(NoInternetConnection value)? noInternetConnection,
@@ -225,35 +225,35 @@ abstract class EmailAlreadyExists implements FirebaseExceptions {
 }
 
 /// @nodoc
-abstract class _$$InvalidToHeaderImplCopyWith<$Res> {
-  factory _$$InvalidToHeaderImplCopyWith(_$InvalidToHeaderImpl value,
-          $Res Function(_$InvalidToHeaderImpl) then) =
-      __$$InvalidToHeaderImplCopyWithImpl<$Res>;
+abstract class _$$InvalidEmailImplCopyWith<$Res> {
+  factory _$$InvalidEmailImplCopyWith(
+          _$InvalidEmailImpl value, $Res Function(_$InvalidEmailImpl) then) =
+      __$$InvalidEmailImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$InvalidToHeaderImplCopyWithImpl<$Res>
-    extends _$FirebaseExceptionsCopyWithImpl<$Res, _$InvalidToHeaderImpl>
-    implements _$$InvalidToHeaderImplCopyWith<$Res> {
-  __$$InvalidToHeaderImplCopyWithImpl(
-      _$InvalidToHeaderImpl _value, $Res Function(_$InvalidToHeaderImpl) _then)
+class __$$InvalidEmailImplCopyWithImpl<$Res>
+    extends _$FirebaseExceptionsCopyWithImpl<$Res, _$InvalidEmailImpl>
+    implements _$$InvalidEmailImplCopyWith<$Res> {
+  __$$InvalidEmailImplCopyWithImpl(
+      _$InvalidEmailImpl _value, $Res Function(_$InvalidEmailImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$InvalidToHeaderImpl implements InvalidToHeader {
-  const _$InvalidToHeaderImpl();
+class _$InvalidEmailImpl implements InvalidEmail {
+  const _$InvalidEmailImpl();
 
   @override
   String toString() {
-    return 'FirebaseExceptions.invalidToHeader()';
+    return 'FirebaseExceptions.invalidEmail()';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$InvalidToHeaderImpl);
+        (other.runtimeType == runtimeType && other is _$InvalidEmailImpl);
   }
 
   @override
@@ -263,41 +263,41 @@ class _$InvalidToHeaderImpl implements InvalidToHeader {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() emailAlreadyExists,
-    required TResult Function() invalidToHeader,
+    required TResult Function() invalidEmail,
     required TResult Function() invalidCredential,
     required TResult Function() formatException,
     required TResult Function() noInternetConnection,
     required TResult Function() unexpectedError,
   }) {
-    return invalidToHeader();
+    return invalidEmail();
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? emailAlreadyExists,
-    TResult? Function()? invalidToHeader,
+    TResult? Function()? invalidEmail,
     TResult? Function()? invalidCredential,
     TResult? Function()? formatException,
     TResult? Function()? noInternetConnection,
     TResult? Function()? unexpectedError,
   }) {
-    return invalidToHeader?.call();
+    return invalidEmail?.call();
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? emailAlreadyExists,
-    TResult Function()? invalidToHeader,
+    TResult Function()? invalidEmail,
     TResult Function()? invalidCredential,
     TResult Function()? formatException,
     TResult Function()? noInternetConnection,
     TResult Function()? unexpectedError,
     required TResult orElse(),
   }) {
-    if (invalidToHeader != null) {
-      return invalidToHeader();
+    if (invalidEmail != null) {
+      return invalidEmail();
     }
     return orElse();
   }
@@ -306,48 +306,48 @@ class _$InvalidToHeaderImpl implements InvalidToHeader {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(EmailAlreadyExists value) emailAlreadyExists,
-    required TResult Function(InvalidToHeader value) invalidToHeader,
+    required TResult Function(InvalidEmail value) invalidEmail,
     required TResult Function(InvalidCredential value) invalidCredential,
     required TResult Function(FormatException value) formatException,
     required TResult Function(NoInternetConnection value) noInternetConnection,
     required TResult Function(UnexpectedError value) unexpectedError,
   }) {
-    return invalidToHeader(this);
+    return invalidEmail(this);
   }
 
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(EmailAlreadyExists value)? emailAlreadyExists,
-    TResult? Function(InvalidToHeader value)? invalidToHeader,
+    TResult? Function(InvalidEmail value)? invalidEmail,
     TResult? Function(InvalidCredential value)? invalidCredential,
     TResult? Function(FormatException value)? formatException,
     TResult? Function(NoInternetConnection value)? noInternetConnection,
     TResult? Function(UnexpectedError value)? unexpectedError,
   }) {
-    return invalidToHeader?.call(this);
+    return invalidEmail?.call(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(EmailAlreadyExists value)? emailAlreadyExists,
-    TResult Function(InvalidToHeader value)? invalidToHeader,
+    TResult Function(InvalidEmail value)? invalidEmail,
     TResult Function(InvalidCredential value)? invalidCredential,
     TResult Function(FormatException value)? formatException,
     TResult Function(NoInternetConnection value)? noInternetConnection,
     TResult Function(UnexpectedError value)? unexpectedError,
     required TResult orElse(),
   }) {
-    if (invalidToHeader != null) {
-      return invalidToHeader(this);
+    if (invalidEmail != null) {
+      return invalidEmail(this);
     }
     return orElse();
   }
 }
 
-abstract class InvalidToHeader implements FirebaseExceptions {
-  const factory InvalidToHeader() = _$InvalidToHeaderImpl;
+abstract class InvalidEmail implements FirebaseExceptions {
+  const factory InvalidEmail() = _$InvalidEmailImpl;
 }
 
 /// @nodoc
@@ -389,7 +389,7 @@ class _$InvalidCredentialImpl implements InvalidCredential {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() emailAlreadyExists,
-    required TResult Function() invalidToHeader,
+    required TResult Function() invalidEmail,
     required TResult Function() invalidCredential,
     required TResult Function() formatException,
     required TResult Function() noInternetConnection,
@@ -402,7 +402,7 @@ class _$InvalidCredentialImpl implements InvalidCredential {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? emailAlreadyExists,
-    TResult? Function()? invalidToHeader,
+    TResult? Function()? invalidEmail,
     TResult? Function()? invalidCredential,
     TResult? Function()? formatException,
     TResult? Function()? noInternetConnection,
@@ -415,7 +415,7 @@ class _$InvalidCredentialImpl implements InvalidCredential {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? emailAlreadyExists,
-    TResult Function()? invalidToHeader,
+    TResult Function()? invalidEmail,
     TResult Function()? invalidCredential,
     TResult Function()? formatException,
     TResult Function()? noInternetConnection,
@@ -432,7 +432,7 @@ class _$InvalidCredentialImpl implements InvalidCredential {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(EmailAlreadyExists value) emailAlreadyExists,
-    required TResult Function(InvalidToHeader value) invalidToHeader,
+    required TResult Function(InvalidEmail value) invalidEmail,
     required TResult Function(InvalidCredential value) invalidCredential,
     required TResult Function(FormatException value) formatException,
     required TResult Function(NoInternetConnection value) noInternetConnection,
@@ -445,7 +445,7 @@ class _$InvalidCredentialImpl implements InvalidCredential {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(EmailAlreadyExists value)? emailAlreadyExists,
-    TResult? Function(InvalidToHeader value)? invalidToHeader,
+    TResult? Function(InvalidEmail value)? invalidEmail,
     TResult? Function(InvalidCredential value)? invalidCredential,
     TResult? Function(FormatException value)? formatException,
     TResult? Function(NoInternetConnection value)? noInternetConnection,
@@ -458,7 +458,7 @@ class _$InvalidCredentialImpl implements InvalidCredential {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(EmailAlreadyExists value)? emailAlreadyExists,
-    TResult Function(InvalidToHeader value)? invalidToHeader,
+    TResult Function(InvalidEmail value)? invalidEmail,
     TResult Function(InvalidCredential value)? invalidCredential,
     TResult Function(FormatException value)? formatException,
     TResult Function(NoInternetConnection value)? noInternetConnection,
@@ -515,7 +515,7 @@ class _$FormatExceptionImpl implements FormatException {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() emailAlreadyExists,
-    required TResult Function() invalidToHeader,
+    required TResult Function() invalidEmail,
     required TResult Function() invalidCredential,
     required TResult Function() formatException,
     required TResult Function() noInternetConnection,
@@ -528,7 +528,7 @@ class _$FormatExceptionImpl implements FormatException {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? emailAlreadyExists,
-    TResult? Function()? invalidToHeader,
+    TResult? Function()? invalidEmail,
     TResult? Function()? invalidCredential,
     TResult? Function()? formatException,
     TResult? Function()? noInternetConnection,
@@ -541,7 +541,7 @@ class _$FormatExceptionImpl implements FormatException {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? emailAlreadyExists,
-    TResult Function()? invalidToHeader,
+    TResult Function()? invalidEmail,
     TResult Function()? invalidCredential,
     TResult Function()? formatException,
     TResult Function()? noInternetConnection,
@@ -558,7 +558,7 @@ class _$FormatExceptionImpl implements FormatException {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(EmailAlreadyExists value) emailAlreadyExists,
-    required TResult Function(InvalidToHeader value) invalidToHeader,
+    required TResult Function(InvalidEmail value) invalidEmail,
     required TResult Function(InvalidCredential value) invalidCredential,
     required TResult Function(FormatException value) formatException,
     required TResult Function(NoInternetConnection value) noInternetConnection,
@@ -571,7 +571,7 @@ class _$FormatExceptionImpl implements FormatException {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(EmailAlreadyExists value)? emailAlreadyExists,
-    TResult? Function(InvalidToHeader value)? invalidToHeader,
+    TResult? Function(InvalidEmail value)? invalidEmail,
     TResult? Function(InvalidCredential value)? invalidCredential,
     TResult? Function(FormatException value)? formatException,
     TResult? Function(NoInternetConnection value)? noInternetConnection,
@@ -584,7 +584,7 @@ class _$FormatExceptionImpl implements FormatException {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(EmailAlreadyExists value)? emailAlreadyExists,
-    TResult Function(InvalidToHeader value)? invalidToHeader,
+    TResult Function(InvalidEmail value)? invalidEmail,
     TResult Function(InvalidCredential value)? invalidCredential,
     TResult Function(FormatException value)? formatException,
     TResult Function(NoInternetConnection value)? noInternetConnection,
@@ -642,7 +642,7 @@ class _$NoInternetConnectionImpl implements NoInternetConnection {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() emailAlreadyExists,
-    required TResult Function() invalidToHeader,
+    required TResult Function() invalidEmail,
     required TResult Function() invalidCredential,
     required TResult Function() formatException,
     required TResult Function() noInternetConnection,
@@ -655,7 +655,7 @@ class _$NoInternetConnectionImpl implements NoInternetConnection {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? emailAlreadyExists,
-    TResult? Function()? invalidToHeader,
+    TResult? Function()? invalidEmail,
     TResult? Function()? invalidCredential,
     TResult? Function()? formatException,
     TResult? Function()? noInternetConnection,
@@ -668,7 +668,7 @@ class _$NoInternetConnectionImpl implements NoInternetConnection {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? emailAlreadyExists,
-    TResult Function()? invalidToHeader,
+    TResult Function()? invalidEmail,
     TResult Function()? invalidCredential,
     TResult Function()? formatException,
     TResult Function()? noInternetConnection,
@@ -685,7 +685,7 @@ class _$NoInternetConnectionImpl implements NoInternetConnection {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(EmailAlreadyExists value) emailAlreadyExists,
-    required TResult Function(InvalidToHeader value) invalidToHeader,
+    required TResult Function(InvalidEmail value) invalidEmail,
     required TResult Function(InvalidCredential value) invalidCredential,
     required TResult Function(FormatException value) formatException,
     required TResult Function(NoInternetConnection value) noInternetConnection,
@@ -698,7 +698,7 @@ class _$NoInternetConnectionImpl implements NoInternetConnection {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(EmailAlreadyExists value)? emailAlreadyExists,
-    TResult? Function(InvalidToHeader value)? invalidToHeader,
+    TResult? Function(InvalidEmail value)? invalidEmail,
     TResult? Function(InvalidCredential value)? invalidCredential,
     TResult? Function(FormatException value)? formatException,
     TResult? Function(NoInternetConnection value)? noInternetConnection,
@@ -711,7 +711,7 @@ class _$NoInternetConnectionImpl implements NoInternetConnection {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(EmailAlreadyExists value)? emailAlreadyExists,
-    TResult Function(InvalidToHeader value)? invalidToHeader,
+    TResult Function(InvalidEmail value)? invalidEmail,
     TResult Function(InvalidCredential value)? invalidCredential,
     TResult Function(FormatException value)? formatException,
     TResult Function(NoInternetConnection value)? noInternetConnection,
@@ -768,7 +768,7 @@ class _$UnexpectedErrorImpl implements UnexpectedError {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() emailAlreadyExists,
-    required TResult Function() invalidToHeader,
+    required TResult Function() invalidEmail,
     required TResult Function() invalidCredential,
     required TResult Function() formatException,
     required TResult Function() noInternetConnection,
@@ -781,7 +781,7 @@ class _$UnexpectedErrorImpl implements UnexpectedError {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? emailAlreadyExists,
-    TResult? Function()? invalidToHeader,
+    TResult? Function()? invalidEmail,
     TResult? Function()? invalidCredential,
     TResult? Function()? formatException,
     TResult? Function()? noInternetConnection,
@@ -794,7 +794,7 @@ class _$UnexpectedErrorImpl implements UnexpectedError {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? emailAlreadyExists,
-    TResult Function()? invalidToHeader,
+    TResult Function()? invalidEmail,
     TResult Function()? invalidCredential,
     TResult Function()? formatException,
     TResult Function()? noInternetConnection,
@@ -811,7 +811,7 @@ class _$UnexpectedErrorImpl implements UnexpectedError {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(EmailAlreadyExists value) emailAlreadyExists,
-    required TResult Function(InvalidToHeader value) invalidToHeader,
+    required TResult Function(InvalidEmail value) invalidEmail,
     required TResult Function(InvalidCredential value) invalidCredential,
     required TResult Function(FormatException value) formatException,
     required TResult Function(NoInternetConnection value) noInternetConnection,
@@ -824,7 +824,7 @@ class _$UnexpectedErrorImpl implements UnexpectedError {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(EmailAlreadyExists value)? emailAlreadyExists,
-    TResult? Function(InvalidToHeader value)? invalidToHeader,
+    TResult? Function(InvalidEmail value)? invalidEmail,
     TResult? Function(InvalidCredential value)? invalidCredential,
     TResult? Function(FormatException value)? formatException,
     TResult? Function(NoInternetConnection value)? noInternetConnection,
@@ -837,7 +837,7 @@ class _$UnexpectedErrorImpl implements UnexpectedError {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(EmailAlreadyExists value)? emailAlreadyExists,
-    TResult Function(InvalidToHeader value)? invalidToHeader,
+    TResult Function(InvalidEmail value)? invalidEmail,
     TResult Function(InvalidCredential value)? invalidCredential,
     TResult Function(FormatException value)? formatException,
     TResult Function(NoInternetConnection value)? noInternetConnection,

@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 
-class CustomTextField extends StatelessWidget {
+class CustomTextFormField extends StatelessWidget {
   final Function(String)? onChanged;
-  final String hintText;
+  final String label;
+  final String? hintText;
   final bool? obScureText;
   final TextInputType? textInputType;
   final int? maxLines;
@@ -10,23 +11,30 @@ class CustomTextField extends StatelessWidget {
   final String? Function(String?)? validator;
   final Function(String?)? onSaved;
   final String? initialValue;
+  final Widget? icon;
+  final TextEditingController controller;
+  final FocusNode? myFocusNode;
 
-  const CustomTextField(
-      {super.key,
-      required this.hintText,
-      required this.onChanged,
-      this.textInputType,
-      this.obScureText = false,
-      this.minLines = 1,
-      this.maxLines = 1,
-      this.validator,
-      this.onSaved,
-      this.initialValue = ""});
+  const CustomTextFormField({
+    super.key,
+    required this.label,
+    required this.onChanged,
+    this.textInputType,
+    this.obScureText = false,
+    this.minLines = 1,
+    this.maxLines = 1,
+    this.validator,
+    this.onSaved,
+    this.initialValue = "",
+    this.icon,
+    required this.controller,
+    this.hintText,
+    this.myFocusNode,
+  });
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
-      initialValue: initialValue,
       onSaved: onSaved,
       validator: (value) {
         if (value?.isEmpty ?? true) {
@@ -34,15 +42,20 @@ class CustomTextField extends StatelessWidget {
         }
         return null;
       },
+      controller: controller,
       minLines: minLines,
       maxLines: maxLines,
+      focusNode: myFocusNode,
       keyboardType: textInputType,
       obscureText: obScureText!,
       onChanged: onChanged,
+      cursorColor: Colors.blue.shade300,
       decoration: InputDecoration(
-        hintText: hintText,
+        suffixIcon: icon ?? const SizedBox(),
+        contentPadding: const EdgeInsets.all(15),
+        labelText: label,
         enabledBorder: buildBorder(),
-        focusedBorder: buildBorder(color: Colors.black87),
+        focusedBorder: buildBorder(),
         border: buildBorder(),
       ),
     );
@@ -50,8 +63,8 @@ class CustomTextField extends StatelessWidget {
 
   OutlineInputBorder buildBorder({Color color = Colors.grey}) {
     return OutlineInputBorder(
-      borderRadius: BorderRadius.circular(27),
-      borderSide: BorderSide(color: color, width: 1.0),
+      borderRadius: BorderRadius.circular(20),
+      borderSide: BorderSide(color: color, width: 1.3),
     );
   }
 }

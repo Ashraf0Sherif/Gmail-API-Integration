@@ -5,12 +5,20 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:googleapis/gmail/v1.dart';
 
-import 'firebase_exceptions.dart';
-
 class CustomFirebase {
   final GoogleSignIn _googleSignIn = GoogleSignIn(
     scopes: <String>[GmailApi.gmailSendScope],
   );
+
+  CustomFirebase() {
+    _googleSignIn.onCurrentUserChanged.listen((GoogleSignInAccount? account) {
+      if (account != null) {
+        print('User signed in: ${account.email}');
+      } else {
+        print('User signed out');
+      }
+    });
+  }
 
   Future<UserCredential> signInWithGoogle() async {
     final GoogleSignInAccount? googleUser = await _googleSignIn.signIn();
@@ -45,20 +53,15 @@ class CustomFirebase {
 
     var gmailApi = GmailApi(httpClient);
 
-    var email = '''From: "me"
-To: $toEmail
-Subject: $title
-
-$body.''';
+    var email = 'From: "me"\n'
+        'To: $toEmail\n'
+        'Subject: $title\n'
+        '\n'
+        '$body';
 
     var base64Email = base64UrlEncode(utf8.encode(email));
 
-    var message = Message()..raw = base64Email;
-    try {
-      await gmailApi.users.messages.send(message, 'me');
-      print('Email sent successfully.');
-    } catch (error) {
-      throw FirebaseExceptions.getFirebaseException(error);
-    }
+    var message = Message(raw: base64Email);
+    await gmailApi.users.messages.send(message, 'me');
   }
 }
