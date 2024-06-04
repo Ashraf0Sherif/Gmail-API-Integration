@@ -24,6 +24,7 @@ class _SuccessAuthViewState extends State<SuccessAuthView> {
   TextEditingController email = TextEditingController();
   TextEditingController body = TextEditingController();
   TextEditingController title = TextEditingController();
+  AutovalidateMode autovalidateMode = AutovalidateMode.disabled;
   File? _attachment;
   bool _isLoading = false;
   final GlobalKey<FormState> _formKey = GlobalKey();
@@ -54,11 +55,12 @@ class _SuccessAuthViewState extends State<SuccessAuthView> {
   }
 
   void _clearMessage() {
-    FocusScope.of(context).unfocus();
-    email.clear();
-    body.clear();
-    title.clear();
     setState(() {
+      FocusScope.of(context).unfocus();
+      email.clear();
+      body.clear();
+      title.clear();
+      autovalidateMode = AutovalidateMode.disabled;
       _attachment = null;
       _isLoading = false;
     });
@@ -73,6 +75,7 @@ class _SuccessAuthViewState extends State<SuccessAuthView> {
         child: Scaffold(
           body: Form(
             key: _formKey,
+            autovalidateMode: autovalidateMode,
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20.0),
               child: ScrollConfiguration(
@@ -168,7 +171,9 @@ class _SuccessAuthViewState extends State<SuccessAuthView> {
                                 _isLoading = true;
                               });
                             } else {
-                              setState(() {});
+                              setState(() {
+                                autovalidateMode = AutovalidateMode.always;
+                              });
                             }
                           },
                           label: "Send Message",
