@@ -48,6 +48,8 @@ dependencies:
   build_runner: ^2.4.8
   mime: ^1.0.4
   path: ^1.8.3
+  file_picker: ^8.0.0+1
+  modal_progress_hud_nsn: ^0.5.1
 
 dev_dependencies:
   flutter_test:
@@ -87,12 +89,10 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  # fonts:
-  #   - family: Schyler
-  #     fonts:
-  #       - asset: fonts/Schyler-Regular.ttf
-  #       - asset: fonts/Schyler-Italic.ttf
-  #         style: italic
+  fonts:
+    - family: VarelaRound-Regular
+      fonts:
+         - asset: assets/fonts/VarelaRound-Regular.ttf
   #   - family: Trajan Pro
   #     fonts:
   #       - asset: fonts/TrajanPro.ttf

@@ -4,6 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freelancing/firebase/custom_firebase.dart';
 import 'package:freelancing/logic/send_message_cubit/send_message_cubit.dart';
 import 'package:freelancing/repositories/my_repo.dart';
+import 'package:freelancing/widgets/custom_button.dart';
 import 'package:freelancing/widgets/success_auth_view.dart';
 
 import 'firebase_options.dart';
@@ -45,22 +46,24 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        body: BlocBuilder<AuthCubit, AuthState>(
-          builder: (context, state) {
-            if (state is AuthSuccess) {
-              return const SuccessAuthView();
-            } else {
-              return Center(
-                child: ElevatedButton(
-                  onPressed: () {
-                    BlocProvider.of<AuthCubit>(context).signInWithGoogle();
-                  },
-                  child: const Text("Login"),
-                ),
-              );
-            }
-          },
+      home: SafeArea(
+        child: Scaffold(
+          body: BlocBuilder<AuthCubit, AuthState>(
+            builder: (context, state) {
+              if (state is AuthSuccess) {
+                return const SuccessAuthView();
+              } else {
+                return Center(
+                  child: CustomButton(
+                    onPressed: () {
+                      BlocProvider.of<AuthCubit>(context).signInWithGoogle();
+                    },
+                    label: 'Login',
+                  ),
+                );
+              }
+            },
+          ),
         ),
       ),
     );

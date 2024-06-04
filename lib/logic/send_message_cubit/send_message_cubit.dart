@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:bloc/bloc.dart';
 import 'package:freelancing/repositories/my_repo.dart';
 import 'package:meta/meta.dart';
@@ -13,9 +15,10 @@ class SendMessageCubit extends Cubit<SendMessageState> {
   void sendMessage(
       {required String email,
       required String body,
-      required String title}) async {
-    var response =
-        await myRepo.sendMessage(toEmail: email, body: body, title: title);
+      required String title,
+      File? attachment}) async {
+    var response = await myRepo.sendMessage(
+        toEmail: email, body: body, title: title, attachment: attachment);
     response.when(
       success: (message) {
         emit(SendMessageSuccess());
