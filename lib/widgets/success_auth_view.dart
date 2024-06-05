@@ -69,6 +69,9 @@ class _SuccessAuthViewState extends State<SuccessAuthView> {
   @override
   Widget build(BuildContext context) {
     return ModalProgressHUD(
+      progressIndicator: const CircularProgressIndicator(
+        color: Colors.red,
+      ),
       inAsyncCall: _isLoading,
       child: GestureDetector(
         onTap: () => FocusScope.of(context).unfocus(),
@@ -167,6 +170,7 @@ class _SuccessAuthViewState extends State<SuccessAuthView> {
                                       body: body.text,
                                       title: title.text,
                                       attachment: _attachment);
+                              FocusScope.of(context).unfocus();
                               setState(() {
                                 _isLoading = true;
                               });

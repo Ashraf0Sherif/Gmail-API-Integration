@@ -14,6 +14,7 @@ class AuthCubit extends Cubit<AuthState> {
   final MyRepo myRepo;
 
   void signInWithGoogle() async {
+    emit(AuthLoading());
     var response = await myRepo.signInWithGoogle();
     response.when(success: (credential) {
       emit(AuthSuccess(credential));
@@ -22,8 +23,14 @@ class AuthCubit extends Cubit<AuthState> {
     });
   }
 
-  void signOut() {
-    myRepo.signOut();
-    emit(AuthInitial());
+  void signOut() async {
+    emit(AuthLoading());
+    var response = await myRepo.signOut();
+    response.when(success: (nothing) {
+      print("555");
+      emit(AuthInitial());
+    }, failure: (FirebaseExceptions firebaseExceptions) {
+      emit(AuthFailure(FirebaseExceptions.getErrorMessage(firebaseExceptions)));
+    });
   }
 }
